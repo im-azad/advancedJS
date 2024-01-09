@@ -26,3 +26,11 @@ class ChildTriangle extends Triangle {
     return " Hi this is from child triangle";
   }
 }
+
+class ColorTriangle extends Triangle {
+    constructor (a, b, color) { // add new constructor 
+        super(a,b); // super use for inherit parent constructor
+        this.color = color;
+    }
+
+}
