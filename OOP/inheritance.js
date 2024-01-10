@@ -34,3 +34,13 @@ class ColorTriangle extends Triangle {
     }
 
 }
+class MoodColorTriangle extends ColorTriangle {
+    constructor (a, b, color, mood) { // add new constructor 
+        super(a,b,color); // super use for inherit parent constructor
+        this.mood = mood;
+    }
+    colorMood() {
+      return "Three class inheritance using super() to parent component"
+    }
+
+}
