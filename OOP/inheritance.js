@@ -20,7 +20,7 @@ class Triangle {
 class ChildTriangle extends Triangle {
   // inheritance constructor
   describe() {
-    return `I am a Child triangle of Triangle `; 
+    return `I am a Child triangle of Triangle `;
   }
   sayHi() {
     return " Hi this is from child triangle";
@@ -28,19 +28,43 @@ class ChildTriangle extends Triangle {
 }
 
 class ColorTriangle extends Triangle {
-    constructor (a, b, color) { // add new constructor 
-        super(a,b); // super use for inherit parent constructor
-        this.color = color;
-    }
-
+  constructor(a, b, color) {
+    // add new constructor
+    super(a, b); // super use for inherit parent constructor
+    this.color = color;
+  }
 }
 class MoodColorTriangle extends ColorTriangle {
-    constructor (a, b, color, mood) { // add new constructor 
-        super(a,b,color); // super use for inherit parent constructor
-        this.mood = mood;
-    }
-    colorMood() {
-      return "Three class inheritance using super() to parent component"
-    }
+  constructor(a, b, color, mood) {
+    // add new constructor
+    super(a, b, color); // super use for inherit parent constructor
+    this.mood = mood;
+  }
+  colorMood() {
+    return "Three class inheritance using super() to parent component";
+  }
+}
 
+// Static properties
+
+class Cat {
+  constructor(name, spaces) {
+    this.name = name;
+    this.spaces = spaces;
+  }
+
+  static bulk = "Mwo Mwo";
+}
+
+// Static properties
+
+class Cat3 {
+  constructor(name, spaces) {
+    this.name = name;
+    this.spaces = spaces;
+  }
+
+  static bulk() {
+    console.log("Wow", this);
+  }
 }
