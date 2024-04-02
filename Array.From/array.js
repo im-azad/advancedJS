@@ -10,3 +10,8 @@ const set = new Set([2, 4, 6, 8]);
 console.log(set); //Set(4) { 2, 4, 6, 8 }
 const objToArray = Array.from(set);
 console.log(objToArray); // [ 2, 4, 6, 8 ]
+
+Array.from("abcd", (x) => x.toLocaleUpperCase()); // second argument is a maping function
+// it's return a ["A", "B", "C", "D"]
+Array.from({length: 100}, (item, index) => index + 1)
+// it's return 1 to 100 number sequence
